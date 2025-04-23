@@ -1,0 +1,147 @@
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(45deg, #00d2ff, #3a7bd5, #00d2ff, #3a7bd5);
+  background-size: 400% 400%;
+  animation: neon-background 15s ease infinite;
+  filter: blur(70px);
+}
+
+@keyframes neon-background {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.login-card {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+  padding: 50px 35px;
+  width: 320px;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 25px rgba(0, 210, 255, 0.4);
+}
+
+.login-card h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #00d2ff;
+  text-shadow: 0 0 15px #00d2ff, 0 0 25px #00d2ff, 0 0 35px #00d2ff;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 8px rgba(0, 210, 255, 0.5);
+}
+
+.login-card input::placeholder {
+  color: #cccccc;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #00d2ff;
+  color: #111;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+.login-card button:hover {
+  background-color: #3a7bd5;
+  box-shadow: 0 0 30px rgba(0, 210, 255, 0.8);
+  color: #fff;
+}
+
+.error-msg {
+  color: #ff4d4d;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+
+
+.dashboard-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+}
+
+.dashboard-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 50px 80px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 80%;
+  max-width: 450px;
+  backdrop-filter: blur(10px);
+}
+
+.dashboard-card h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ecf0f1;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.dashboard-card p {
+  font-size: 20px;
+  color: #bdc3c7;
+  margin-bottom: 25px;
+}
+
+.dashboard-card button {
+  padding: 12px 25px;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+}
+
+.dashboard-card button:hover {
+  background-color: #c0392b;
+  box-shadow: 0 0 20px rgba(231, 76, 60, 0.8);
+}
